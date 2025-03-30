@@ -6,10 +6,10 @@ import Link from "next/link"
 import { motion, useScroll, useTransform, useInView, useSpring, useAnimation } from "framer-motion"
 import { ChevronRight, ArrowRight, Shield, Zap, Globe, Server } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import NavBar from "./nav-bar"
-import FeatureTab from "./feature-tab"
-import Footer from "./footer"
-import YoutubeImage from "@/public/assets/images/youtube.jpg"
+import NavBar from "../components/nav-bar"
+import FeatureTab from "../components/feature-tab"
+import Footer from "../components/footer"
+import YoutubeImage from "@/public/assets/images/youtube.png"
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -116,7 +116,7 @@ export default function Home() {
       <NavBar isScrolled={isScrolled} />
 
       {/* Hero Section */}
-      <section ref={heroRef} className="relative pt-24 md:pt-32 pb-20 overflow-hidden">
+      <section ref={heroRef} className="relative pt-24 md:pt-32 pb-20 overflow-hidden banner">
         <div className="container px-4 mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <motion.div
@@ -129,7 +129,7 @@ export default function Home() {
                 variants={itemVariants}
                 className="inline-flex items-center px-4 py-2 rounded-full bg-sky-100 text-sky-600 text-sm font-medium mb-2"
               >
-                <span className="mr-2">Open Source</span>
+                <span className="mr-2">Latest Version 1.0.0</span>
                 <span className="flex h-2 w-2 rounded-full bg-sky-500"></span>
               </motion.div>
 
@@ -212,7 +212,7 @@ export default function Home() {
                   />
                 </motion.div>
 
-                <motion.div
+                {/* <motion.div
                   className="absolute -bottom-6 -right-6 bg-white rounded-lg p-3 shadow-lg border border-slate-200"
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
@@ -222,7 +222,7 @@ export default function Home() {
                     <div className="h-3 w-3 rounded-full bg-green-500"></div>
                     <span className="text-sm font-medium text-slate-700">Secure Connection</span>
                   </div>
-                </motion.div>
+                </motion.div> */}
               </div>
             </motion.div>
           </div>
@@ -375,7 +375,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <Link
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  href="https://www.youtube.com/watch?v=VkzG5BU2gjo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center"
@@ -570,7 +570,7 @@ export default function Home() {
                     </Button>
                   </motion.div>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button size="lg" variant="outline" className="border-sky-200 hover:bg-sky-700 text-white">
+                    <Button size="lg" variant="outline" className="border-sky-200 bg-sky-600 text-white">
                       View Documentation <ChevronRight className="ml-2 h-4 w-4" />
                     </Button>
                   </motion.div>

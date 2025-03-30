@@ -80,3 +80,8 @@ html {
   scroll-behavior: smooth;
 }
 
+.banner {
+  padding: 100px 0 240px;
+  position: relative;
+  background: url(/assets/images/banner.webp) bottom / 100% 100% no-repeat;
+}
