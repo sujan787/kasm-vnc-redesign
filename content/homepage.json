@@ -1,4 +1,5 @@
 {
-    "title": "Welcome to My Awesome Site",
-    "description": "This is some description text editable from CloudCannon!"
-  }
+  "title": "Welcome to My App Router Site",
+  "subtitle": "We build cool stuff.",
+  "description": "This is a simple static description."
+}
