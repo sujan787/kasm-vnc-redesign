@@ -10,6 +10,7 @@ import NavBar from "../components/nav-bar"
 import FeatureTab from "../components/feature-tab"
 import Footer from "../components/footer"
 import YoutubeImage from "@/public/assets/images/youtube.png"
+import homepage from '../content/homepage.json';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -144,12 +145,11 @@ export default function Home() {
                 variants={itemVariants}
                 className="text-2xl md:text-3xl font-semibold text-slate-700"
               >
-                A modern open source VNC server.
+               {homepage.title}
               </motion.h2>
 
               <motion.p variants={itemVariants} className="text-lg text-slate-600 max-w-xl">
-                Enhanced security, higher compression, smoother encoding... all in a web-based client. Connect to your
-                Linux server's desktop from any web browser. No client software install required.
+              {homepage.description}
               </motion.p>
 
               <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4">
