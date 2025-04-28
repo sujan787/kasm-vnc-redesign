@@ -146,13 +146,13 @@ export default function Home() {
                 className="text-2xl md:text-3xl font-semibold text-slate-700"
                 data-editable="title"
               >
-               {homepage.title}
+                <p className="editable"> {homepage.title}</p>
               </motion.h2>
 
               <motion.p variants={itemVariants} className="text-lg text-slate-600 max-w-xl" data-editable="description">
-              {homepage.description}
-              </motion.p>
 
+              </motion.p>
+              <p className="editable"> {homepage.description}</p>
               <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4">
                 <Button
                   size="lg"
@@ -270,10 +270,10 @@ export default function Home() {
               animate={
                 featuresInView
                   ? {
-                      opacity: [0, 1],
-                      y: [20, 0],
-                      transition: { duration: 0.8 },
-                    }
+                    opacity: [0, 1],
+                    y: [20, 0],
+                    transition: { duration: 0.8 },
+                  }
                   : {}
               }
             >
@@ -284,10 +284,10 @@ export default function Home() {
               animate={
                 featuresInView
                   ? {
-                      opacity: [0, 1],
-                      y: [20, 0],
-                      transition: { duration: 0.8, delay: 0.2 },
-                    }
+                    opacity: [0, 1],
+                    y: [20, 0],
+                    transition: { duration: 0.8, delay: 0.2 },
+                  }
                   : {}
               }
             >
@@ -299,10 +299,10 @@ export default function Home() {
               animate={
                 featuresInView
                   ? {
-                      opacity: [0, 1],
-                      y: [20, 0],
-                      transition: { duration: 0.8, delay: 0.4 },
-                    }
+                    opacity: [0, 1],
+                    y: [20, 0],
+                    transition: { duration: 0.8, delay: 0.4 },
+                  }
                   : {}
               }
             >
@@ -359,10 +359,10 @@ export default function Home() {
               animate={
                 connectInView
                   ? {
-                      scale: [1, 1.05, 1],
-                      opacity: [0.2, 0.3, 0.2],
-                      transition: { duration: 5, repeat: Number.POSITIVE_INFINITY },
-                    }
+                    scale: [1, 1.05, 1],
+                    opacity: [0.2, 0.3, 0.2],
+                    transition: { duration: 5, repeat: Number.POSITIVE_INFINITY },
+                  }
                   : {}
               }
             ></motion.div>
