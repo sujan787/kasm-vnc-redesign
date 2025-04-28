@@ -144,11 +144,12 @@ export default function Home() {
               <motion.h2
                 variants={itemVariants}
                 className="text-2xl md:text-3xl font-semibold text-slate-700"
+                data-editable
               >
                {homepage.title}
               </motion.h2>
 
-              <motion.p variants={itemVariants} className="text-lg text-slate-600 max-w-xl">
+              <motion.p variants={itemVariants} className="text-lg text-slate-600 max-w-xl" data-editable>
               {homepage.description}
               </motion.p>
 
