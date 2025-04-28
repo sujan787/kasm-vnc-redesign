@@ -3,6 +3,18 @@ collections_config:
     path: ''
     name: Pages
     icon: wysiwyg
+
+data_config:
+  homepage:
+    path: content/homepage.json
+    fields:
+      - type: text
+        name: title
+        label: Title
+      - type: textarea
+        name: description
+        label: Description
+
 paths:
   static: ''
   uploads: uploads
