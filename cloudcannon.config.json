@@ -1,27 +1,37 @@
 {
-    "collections": {
-      "pages": {
-        "path": "content/",
-        "label": "Pages",
-        "editable": true,
-        "fields": [
-          {
-            "type": "text",
-            "name": "title",
-            "label": "Title"
-          },
-          {
-            "type": "text",
-            "name": "subtitle",
-            "label": "Subtitle"
-          },
-          {
-            "type": "textarea",
-            "name": "description",
-            "label": "Description"
-          }
-        ]
-      }
+  "_schema": "_schema",
+  "source": "/",
+  "editor": {
+    "default_path": null
+  },
+  "source_editor": {
+    "tab_size": 2,
+    "theme": "monokai",
+    "show_gutter": true
+  },
+  "timezone": "Etc/UTC",
+  "collections": {
+    "pages": {
+      "path": "content/",
+      "label": "Pages",
+      "editable": true,
+      "fields": [
+        {
+          "type": "text",
+          "name": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "name": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "textarea",
+          "name": "description",
+          "label": "Description"
+        }
+      ]
     }
   }
-  
+}
