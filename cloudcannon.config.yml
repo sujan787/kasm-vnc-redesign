@@ -1,5 +1,14 @@
-collection:
- pages:
-  path: app
-  output: .
-  filters: "**/*.tsx"
+collections:
+  pages:
+    path: content
+    output: true
+    _enabled_editors:
+      - visual
+      - content
+_editables:
+  text:
+    toolbar: full
+  block:
+    toolbar: full
+  data:
+    preview: true  

@@ -13,6 +13,34 @@ import YoutubeImage from "@/public/assets/images/youtube.png"
 import homepage from '../content/homepage.json';
 
 export default function Home() {
+
+  useEffect(() => {
+    // Check if running in the browser and CloudCannon is available
+    if (typeof window !== 'undefined' && window.CloudCannon) {
+      const handleUpdate = () => {
+        if (!window?.CloudCannon) return;
+        window?.CloudCannon.value()
+          .then((data) => {
+            // Update page with new front matter data
+            const titleElement = document.querySelector('h1');
+            const descriptionElement = document.querySelector('p');
+            if (titleElement) titleElement.textContent = data.title;
+            if (descriptionElement) descriptionElement.textContent = data.description;
+          })
+          .catch((error) => {
+            console.error('Error fetching CloudCannon data:', error);
+          });
+      };
+
+      document.addEventListener('cloudcannon:update', handleUpdate);
+
+      // Cleanup event listener on component unmount
+      return () => {
+        document.removeEventListener('cloudcannon:update', handleUpdate);
+      };
+    }
+  }, []);
+
   const [isScrolled, setIsScrolled] = useState(false)
   const { scrollY } = useScroll()
   const controls = useAnimation()
@@ -150,9 +178,9 @@ export default function Home() {
               </motion.h2>
 
               <motion.p variants={itemVariants} className="text-lg text-slate-600 max-w-xl" data-editable="description">
-
+                <p className="editable"> {homepage.description}</p>
               </motion.p>
-              <p className="editable"> {homepage.description}</p>
+
               <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4">
                 <Button
                   size="lg"
