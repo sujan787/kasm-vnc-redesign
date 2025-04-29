@@ -144,6 +144,8 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-sky-50 to-white ">
       <NavBar isScrolled={isScrolled} />
 
+      <a href="cloudcannon:/collections/content/homepage.json">Edit Content</a>
+
       {/* Hero Section */}
       <section ref={heroRef} className="relative pt-24 md:pt-32 pb-20 overflow-hidden banner">
         <div className="container px-4 mx-auto">

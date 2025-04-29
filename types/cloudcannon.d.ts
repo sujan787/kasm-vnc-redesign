@@ -1,10 +1,14 @@
-// types/cloudcannon.d.ts
-
-interface CloudCannon {
-    value: () => Promise<any>;
-    [key: string]: any; // For flexibility, as CloudCannon's API may have additional methods
-}
-
-interface Window {
+interface CloudCannonData {
+    title: string;
+    subtitle: string;
+    description: string;
+  }
+  
+  interface CloudCannon {
+    value: () => Promise<CloudCannonData>;
+    [key: string]: any;
+  }
+  
+  interface Window {
     CloudCannon: CloudCannon | undefined;
-}
+  }

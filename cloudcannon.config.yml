@@ -5,10 +5,23 @@ collections:
     _enabled_editors:
       - visual
       - content
+    _inputs:
+      title:
+        label: Page Title
+        type: text
+      subtitle:
+        label: Page Subtitle
+        type: text
+      description:
+        label: Page Description
+        type: textarea
 _editables:
   text:
+    selector: h1, h2, p
     toolbar: full
   block:
+    selector: div, section
     toolbar: full
   data:
-    preview: true  
+    preview: true
+    fallback: true
