@@ -1,8 +1,8 @@
 module.exports = {
   collections_config: {
     page: {
-      name: 'page',
-      path: 'app',
+      name: 'content',
+      path: '/content',
       parser: 'frontmatter',
       output: true,
       url: '/',
