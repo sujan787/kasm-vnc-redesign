@@ -19,9 +19,5 @@ _editables:
   text:
     selector: h1, h2, p
     toolbar: full
-  block:
-    selector: div, section
-    toolbar: full
   data:
     preview: true
-    fallback: true
