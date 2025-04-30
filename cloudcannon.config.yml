@@ -29,3 +29,9 @@ _editables:
     mime_type: image/png
     allowed_sources:
       - site-files
+
+_enabled_editors:
+  - visual
+  - content
+
+
