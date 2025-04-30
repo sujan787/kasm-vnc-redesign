@@ -147,13 +147,12 @@ export default function Home() {
               <motion.h2
                 variants={itemVariants}
                 className="text-2xl md:text-3xl font-semibold text-slate-700"
-                data-editable="title"
               >
-                <p className="editable"> {homepage.title}</p>
+                <p className="editable" data-cms-bind="title"> {homepage.title}</p>
               </motion.h2>
 
-              <motion.p variants={itemVariants} className="text-lg text-slate-600 max-w-xl" data-editable="description">
-                <p className="editable"> {homepage.description}</p>
+              <motion.p variants={itemVariants} className="text-lg text-slate-600 max-w-xl" >
+                <p className="editable" data-cms-bind="description"> {homepage.description}</p>
               </motion.p>
 
               <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4">
