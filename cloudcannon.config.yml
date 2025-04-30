@@ -1,12 +1,16 @@
 collections_config:
-  pages:
+  content:
     path: content
     name: Content
     icon: wysiwyg
-  how_to:
+  app:
     path: app
     name: App
     icon: photo
+  out:
+    path: out
+    name: out
+    icon: photo  
 paths:
   static: ''
   uploads: docs/_static
