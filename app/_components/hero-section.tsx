@@ -101,11 +101,11 @@ const HeroSection: FC<HeroSectionProps> = ({ block, dataBinding }) => {
             variants={itemVariants}
             className="text-2xl md:text-3xl font-semibold text-slate-700"
           >
-            <p className="editable" data-cms-bind="title"> {homepage.title}</p>
+            <p className="editable" data-cms-bind="title"> {block.title}</p>
           </motion.h2>
 
           <motion.p variants={itemVariants} className="text-lg text-slate-600 max-w-xl" >
-            <p className="editable" data-cms-bind="description"> {homepage.description}</p>
+            <p className="editable" data-cms-bind="description"> {block.description}</p>
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4">
